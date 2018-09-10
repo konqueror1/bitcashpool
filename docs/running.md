@@ -5,7 +5,7 @@
 * .Net (on Windows) or Mono (on Linux and macOS)
 * MySQL
 * Redis
-* bitcashd
+* bitcashd (https://wallet.choosebitcash.com/linuxinstall.php)
 
 # Build
 
