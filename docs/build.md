@@ -4,6 +4,8 @@
 
 * Windows: dotNet v4.5+.
 * Linux: mono v3.2+.
+Install the latest version from:
+https://www.mono-project.com/download/stable/#download-lin
 * MacOS over mono v3.2+.
 
 ## Steps to Build
