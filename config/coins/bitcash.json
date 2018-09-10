@@ -1,0 +1,8 @@
+{
+    "name": "BitCash",
+    "symbol": "BITC",
+    "algorithm": "cuckoo",
+    "site": "https://www.choosebitcash.com/",
+    "blockExplorer": {
+    }
+}
