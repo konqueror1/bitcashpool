@@ -14,7 +14,7 @@ git clone https://github.com/WillyTheCat/bitcashpool
 ```
 2. Change directory to the project root
 ```
-cd CoiniumServ
+cd bitcashpool
 ```
 3. Install dependencies
 ```
