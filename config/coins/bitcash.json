@@ -2,6 +2,7 @@
     "name": "BitCash",
     "symbol": "BITC",
     "algorithm": "cuckoo",
+    "rpcupdate": "true"
     "site": "https://www.choosebitcash.com/",
     "blockExplorer": {
     }
