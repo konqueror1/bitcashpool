@@ -28,7 +28,7 @@ server=1
 daemon=1
 ```
 1. Start bitcashd or BitCash Wallet.
-1. Unlock wallet and get new wallet address for the pool.
+1. Get the wallet address for the pool (with the RPC command getcurrentaddress).
 
 # Configure Pool
 
