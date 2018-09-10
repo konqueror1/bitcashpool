@@ -19,6 +19,12 @@ git clone https://github.com/WillyTheCat/bitcashpool
 cd bitcashpool
 ```
 3. Install dependencies
+
+If you do not have nuget already, install nuget:
+```
+sudo apt-get install nuget
+```
+Then install the dependencies
 ```
 nuget restore
 ```
