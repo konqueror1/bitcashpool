@@ -42,18 +42,18 @@ namespace CoiniumServ.Utils.Helpers
         /// <returns></returns>
         public static string GetReadableHashrate(this double hashrate)
         {
-            var index = -1;
+            var index = 0;
             double rate = hashrate;
 
-            var units = new[] {"KH/s", "MH/s", "GH/s", "TH/s", "PH/s", "EH/s", "ZH/s", "YH/s"};
+            var units = new[] { "C/s", "KC/s", "MC/s", "GC/s", "TC/s", "PC/s", "EC/s", "ZC/s", "YC/s" };
 
-            do
+            while (rate > 1000)
             {
-                rate = rate/1000;
+                rate = rate / 1000;
                 index++;
-            } while (rate > 1000);
+            };
 
-            return string.Format("{0:0.00} {1}", rate, units[index]);
+            return string.Format("{0:0.00000000} {1}", rate, units[index]);
         }
 
         /// <summary>
