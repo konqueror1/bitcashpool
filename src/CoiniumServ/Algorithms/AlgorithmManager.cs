@@ -1,4 +1,4 @@
-﻿#region License
+#region License
 // 
 //     MIT License
 //
@@ -81,8 +81,8 @@ namespace CoiniumServ.Algorithms
         }
 
         static AlgorithmManager()
-        {
-            Diff1 = BigInteger.Parse("00000000ffff0000000000000000000000000000000000000000000000000000", NumberStyles.HexNumber);
+        {            
+            Diff1 = BigInteger.Parse("7fff800000000000000000000000000000000000000000000000000000000000", NumberStyles.HexNumber);
         }
 
         public IQueryable<IHashAlgorithmStatistics> SearchFor(Expression<Func<IHashAlgorithmStatistics, bool>> predicate)
