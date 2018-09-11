@@ -95,7 +95,7 @@ namespace CoiniumServ.Coin.Coinbase
 
             using (var stream = new MemoryStream())
             {
-                stream.WriteByte(/*27*/16);
+                stream.WriteByte(27/*16*/);
                 stream.WriteValueU32(nonce.BigEndian());
                 stream.WriteValueU32(Convert.ToUInt32(job.EncodedDifficulty, 16).BigEndian());
                 stream.WriteValueU32(nTime.BigEndian());
