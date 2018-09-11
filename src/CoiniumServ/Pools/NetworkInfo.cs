@@ -1,4 +1,4 @@
-﻿#region License
+#region License
 // 
 //     MIT License
 //
@@ -147,7 +147,7 @@ namespace CoiniumServ.Pools
                 var miningInfo = _daemonClient.GetMiningInfo();
 
                 // read data.
-                Hashrate = miningInfo.NetworkHashPerSec;
+                Hashrate = miningInfo.NetworkCyclesPerSec;
                 Difficulty = miningInfo.Difficulty;
                 Round = miningInfo.Blocks + 1;
                 if (!Testnet)
