@@ -127,6 +127,17 @@ namespace CoiniumServ.Daemon
         }
 
         /// <summary>
+        /// Version 0.16.104: Create a coinbase transaction
+        /// </summary>
+        /// <param name="address">The payout address.</param>
+        /// <param name="height">The blockheight.</param>
+        /// <returns>The coinbase transaction.</returns>
+        public Coinbase CreateCoinbaseForAddressWithPoolFee(string bitcoinAddress, int height, string rewardAddress, int permille)
+        {
+            return MakeRequest<Coinbase>("createcoinbaseforaddresswithpoolfee", bitcoinAddress, height, rewardAddress, permille);
+        }
+
+        /// <summary>
         /// Version 0.7: Produces a human-readable JSON object for a raw transaction.
         /// </summary>
         /// <param name="rawTransactionHex">The hex of the raw transaction.</param>

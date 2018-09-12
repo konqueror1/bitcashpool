@@ -40,6 +40,8 @@ namespace CoiniumServ.Daemon
 
         Coinbase CreateCoinbaseForAddress(string bitcoinAddress, int height);
 
+        Coinbase CreateCoinbaseForAddressWithPoolFee(string bitcoinAddress, int height, string rewardAddress, int permille);        
+
         string SubmitBlock(string blockHex);
 
         Block GetBlock(string hash);
