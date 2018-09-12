@@ -161,8 +161,26 @@ namespace CoiniumServ.Transactions
         {
             // TODO: we need a whole refactoring here.
             // we should use DI and it shouldn't really require daemonClient connection to function.
-                        
-            Coinbase tx= daemonClient.CreateCoinbaseForAddress(poolConfig.Wallet.Adress, blockTemplate.Height);
+
+            bool found = false;
+            string address="";
+            int permille = 0;
+            foreach (var pair in poolConfig.Rewards)
+            {
+                address = pair.Key;
+                permille = (int)pair.Value * 10;
+                found = true;
+                break;
+            }
+
+            Coinbase tx;
+            if (found)
+            {
+                tx = daemonClient.CreateCoinbaseForAddressWithPoolFee(poolConfig.Wallet.Adress, blockTemplate.Height, address, permille);
+            } else
+            {
+                tx = daemonClient.CreateCoinbaseForAddress(poolConfig.Wallet.Adress, blockTemplate.Height);
+            }
             /*Console.WriteLine("Coinbase1 {0}", tx.coinbasepart1);
             Console.WriteLine("Coinbase2 {0}", tx.coinbasepart2);*/
             InitialStr = tx.coinbasepart1;
