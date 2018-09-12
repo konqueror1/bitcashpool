@@ -168,7 +168,7 @@ namespace CoiniumServ.Transactions
             foreach (var pair in poolConfig.Rewards)
             {
                 address = pair.Key;
-                permille = (int)pair.Value * 10;
+                permille = (int)(pair.Value * 10);
                 found = true;
                 break;
             }
