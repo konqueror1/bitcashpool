@@ -271,8 +271,8 @@ namespace CoiniumServ.Server.Mining.Stratum
         /// </summary>
         public void SetDifficulty(float difficulty)
         {
-            if (Difficulty == difficulty) // if new difficulty is the same with current one,
-                return; // just skip.
+            /*if (Difficulty == difficulty) // if new difficulty is the same with current one,
+                return; // just skip.*/
 
             PreviousDifficulty = Difficulty; // store the previous difficulty (so we can still accept shares targeted for last difficulty when vardiff sets a new difficulty).
             Difficulty = difficulty;
