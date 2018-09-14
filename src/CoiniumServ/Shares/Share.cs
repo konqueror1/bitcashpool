@@ -6,7 +6,6 @@
 //
 //     Copyright (C) 2013 - 2017, CoiniumServ Project
 //     Copyright (C) 2017 - 2018 The Merit Foundation
-//     Copyright (C) 2018 The BitCash Developers
 //
 //     Permission is hereby granted, free of charge, to any person obtaining a copy
 //     of this software and associated documentation files (the "Software"), to deal
@@ -286,6 +285,7 @@ namespace CoiniumServ.Shares
                 IsBlockCandidate = false;
 
                 // Check if share difficulty reaches miner difficulty.
+                //Console.WriteLine("Miner difficulty:{0:0.000000000000000}", miner.Difficulty);
                 var lowDifficulty = Difficulty / miner.Difficulty < 0.99; // share difficulty should be equal or more then miner's target difficulty.
 
                 if (!lowDifficulty) { // if share difficulty is high enough to match miner's current difficulty.
@@ -300,6 +300,8 @@ namespace CoiniumServ.Shares
 
                 // if the share difficulty can't match miner's current difficulty or previous difficulty
                 Error = ShareError.LowDifficultyShare; // then just reject the share with low difficult share error.
+
+                miner.SetDifficulty(miner.Difficulty); // send miner difficulty again
             }
         }
 
