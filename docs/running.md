@@ -3,7 +3,7 @@
 # Requirements
 
 * .Net (on Windows) or Mono (on Linux and macOS)
-* MySQL
+* MySQL 5.7+ (not MariaDB)
 * Redis
 * bitcashd (https://wallet.choosebitcash.com/linuxinstall.php)
 
