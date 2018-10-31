@@ -36,6 +36,7 @@ namespace CoiniumServ.Mining
         CCMiner,
         CGMiner,
         CudaMiner,
-        BitCashMiner
+        BitCashMiner,
+        Zjazz_Cuda
     }
 }

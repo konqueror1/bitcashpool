@@ -199,6 +199,10 @@ namespace CoiniumServ.Server.Mining.Stratum
                     case "bitcash-miner":
                         Software = MinerSoftware.BitCashMiner;
                         break;
+                    case "zjazz_cuda_lnx":
+                    case "zjazz_cuda_win":
+                        Software = MinerSoftware.Zjazz_Cuda;
+                        break;
                     default:
                         Software = MinerSoftware.Unknown;
                         break;
