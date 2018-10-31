@@ -716,7 +716,7 @@ namespace CoiniumServ.Daemon
         /// <returns>The transaction ID if succesful.</returns>
         public string SendMany(string fromAccount, Dictionary<string, decimal> toBitcoinAddress, int minConf = 1, string comment = "")
         {
-            return MakeRequest<string>("sendmany", fromAccount, toBitcoinAddress, "Payout from pool", minConf, comment);
+            return MakeRequest<string>("sendmany", fromAccount, toBitcoinAddress, "Payout from pool", minConf, comment, toBitcoinAddress.Keys);
         }
 
         /// <summary>
