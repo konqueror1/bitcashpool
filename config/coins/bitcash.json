@@ -5,5 +5,8 @@
     "rpcupdate": true,
     "site": "https://www.choosebitcash.com/",
     "blockExplorer": {
+        "block": "http://vds2009x7.startdedicated.de:3001/block/",
+        "tx": "http://vds2009x7.startdedicated.de:3001/tx/",
+        "address": "http://vds2009x7.startdedicated.de:3001/addresses/"
     }
 }
