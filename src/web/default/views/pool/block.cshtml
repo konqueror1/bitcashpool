@@ -40,7 +40,7 @@
                             <td class="hidden-xs"><a href="@Model.Coin.BlockExplorer.Tx@Model.Block.TransactionHash" target="_blank">@Model.Block.TransactionHash.Substring(0, 10)</a></td>
                             <td>@Model.Block.Amount</td>
                             <td><div class="label @(Model.Block.Accounted ?"bg-green":"bg-red")">@(Model.Block.Accounted ? "Yes" : "No")</div></td>
-                            <td><time class="timeago" datetime="@Model.Block.CreatedAt.ToString("o")">@Model.Block.CreatedAt.ToString("o")</time></td>
+                            <td><time class="timeago" datetime="@Model.Block.CreatedAt.ToString("yyyy-MM-ddTHH:mm:ssZ")">@Model.Block.CreatedAt.ToString("yyyy-MM-ddTHH:mm:ssZ")</time></td>
                         </tr>
                     </tbody>
                 </table>
